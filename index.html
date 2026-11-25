@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三区三线中三区 - 空间规划权威解读与社区平台</title>
+<meta name="description" content="三区三线中三区是国土空间规划的核心框架，本平台以视频为载体深度解读城镇空间、农业空间、生态空间三区内涵，汇聚规划专家与社区创作者，持续输出权威内容。">
+<style>
+:root{
+  --ink:#0e1a24;
+  --ink2:#1c2f3d;
+  --paper:#f5f2ea;
+  --paper2:#ebe6da;
+  --green:#2f6b4f;
+  --green-l:#4f9c74;
+  --gold:#b8893a;
+  --clay:#a85434;
+  --sky:#2c5f7c;
+  --line:rgba(14,26,36,.14);
+  --shadow:0 18px 48px -22px rgba(14,26,36,.45);
+  --radius:18px;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--green);color:#fff}
+
+/* ---------- 顶部导航 ---------- */
+header.site{
+  position:sticky;top:0;z-index:80;
+  background:rgba(245,242,234,.86);
+  backdrop-filter:blur(16px) saturate(1.4);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;gap:28px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(140deg,var(--green),var(--sky));
+  display:grid;place-items:center;box-shadow:0 8px 20px -10px var(--green);
+}
+.brand-mark svg{width:24px;height:24px}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-size:16px;letter-spacing:.5px}
+.brand-txt span{font-size:10.5px;color:var(--ink2);opacity:.65;letter-spacing:2.4px;text-transform:uppercase}
+nav.main{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+nav.main a{
+  font-size:14.5px;padding:8px 14px;border-radius:999px;
+  color:var(--ink2);transition:.25s;position:relative;
+}
+nav.main a:hover{background:rgba(47,107,79,.1);color:var(--green)}
+.nav-cta{
+  font-size:14px;padding:9px 20px;border-radius:999px;
+  background:var(--ink);color:var(--paper);
+  transition:.25s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--green);transform:translateY(-1px)}
+
+/* ---------- 主视觉 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:82px 24px 66px;
+  max-width:var(--maxw);margin:0 auto;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12.5px;letter-spacing:2.4px;color:var(--green);
+  border:1px solid rgba(47,107,79,.3);border-radius:999px;
+  padding:6px 16px;margin-bottom:22px;font-weight:600;
+}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+h1{
+  font-size:clamp(38px,5.6vw,68px);
+  line-height:1.08;letter-spacing:-1.5px;font-weight:800;
+  margin-bottom:24px;color:var(--ink);
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--green) 10%,var(--green-l) 55%,var(--sky) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{
+  font-size:17.5px;color:var(--ink2);max-width:520px;margin-bottom:34px;
+  line-height:1.85;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:14px 28px;border-radius:999px;font-size:15px;font-weight:600;
+  transition:.28s cubic-bezier(.4,0,.2,1);border:1.5px solid transparent;
+}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 14px 30px -14px var(--green)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 38px -14px var(--green);background:#275c43}
+.btn-ghost{border-color:var(--line);color:var(--ink2)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green);background:rgba(47,107,79,.06)}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+.hero-stats div{padding-left:16px;border-left:2px solid rgba(47,107,79,.35)}
+.hero-stats b{display:block;font-size:27px;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
+.hero-stats span{font-size:12.5px;color:var(--ink2);opacity:.75}
+
+/* 主视觉右侧可视化 */
+.hero-visual{position:relative}
+.viz-card{
+  background:linear-gradient(160deg,#fff,#f0ece1);
+  border-radius:26px;padding:26px;border:1px solid var(--line);
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.viz-card::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 80% 0%,rgba(79,156,116,.18),transparent 55%);
+  pointer-events:none;
+}
+.viz-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.viz-head b{font-size:14px;letter-spacing:.5px}
+.viz-tag{font-size:11px;padding:3px 11px;border-radius:999px;background:rgba(47,107,79,.12);color:var(--green);font-weight:600}
+.zone-stack{display:flex;flex-direction:column;gap:12px}
+.zone-row{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;
+  background:#fff;border:1px solid var(--line);transition:.3s;cursor:default;
+}
+.zone-row:hover{transform:translateX(5px);border-color:rgba(47,107,79,.5);box-shadow:0 10px 24px -16px rgba(14,26,36,.5)}
+.zone-dot{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto}
+.zone-dot svg{width:18px;height:18px}
+.zd-urban{background:rgba(44,95,124,.14);color:var(--sky)}
+.zd-agri{background:rgba(184,137,58,.16);color:var(--gold)}
+.zd-eco{background:rgba(47,107,79,.15);color:var(--green)}
+.zone-info{flex:1;min-width:0}
+.zone-info b{display:block;font-size:14px;color:var(--ink)}
+.zone-info span{font-size:11.5px;color:var(--ink2);opacity:.7}
+.zone-bar{width:74px;height:6px;border-radius:99px;background:var(--paper2);overflow:hidden;flex:0 0 auto}
+.zone-bar i{display:block;height:100%;border-radius:99px}
+.zb-urban{background:var(--sky)}
+.zb-agri{background:var(--gold)}
+.zb-eco{background:var(--green)}
+.viz-foot{
+  margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+  display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink2);opacity:.75;
+}
+.hero-visual .float-chip{
+  position:absolute;right:-6px;bottom:-18px;
+  background:var(--ink);color:var(--paper);font-size:12px;
+  padding:9px 17px;border-radius:999px;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:8px;
+}
+.float-chip i{width:7px;height:7px;border-radius:50%;background:var(--green-l);animation:pulse 2s infinite}
+
+/* ---------- 通用章节 ---------- */
+.section{max-width:var(--maxw);margin:0 auto;padding:76px 24px}
+.sec-head{margin-bottom:46px;max-width:760px}
+.sec-kicker{
+  font-size:12px;letter-spacing:3px;color:var(--green);
+  font-weight:700;text-transform:uppercase;margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-kicker::before{content:"";width:26px;height:2px;background:var(--green)}
+h2{
+  font-size:clamp(27px,3.6vw,42px);line-height:1.2;letter-spacing:-.8px;
+  font-weight:800;margin-bottom:16px;
+}
+.sec-head p{font-size:16px;color:var(--ink2);opacity:.85;line-height:1.9}
+
+/* ---------- 三区深度解读 ---------- */
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.zone-card{
+  background:#fff;border-radius:var(--radius);border:1px solid var(--line);
+  padding:32px 28px;position:relative;overflow:hidden;
+  transition:.35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;
+}
+.zone-card::after{
+  content:"";position:absolute;left:0;top:0;width:100%;height:4px;
+  background:var(--accent,var(--green));transform:scaleX(0);transform-origin:left;transition:.4s;
+}
+.zone-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.zone-card:hover::after{transform:scaleX(1)}
+.zc-ico{
+  width:54px;height:54px;border-radius:15px;display:grid;place-items:center;
+  margin-bottom:22px;background:var(--accent-bg,rgba(47,107,79,.12));color:var(--accent,var(--green));
+}
+.zc-ico svg{width:27px;height:27px}
+.zone-card h3{font-size:21px;letter-spacing:-.3px;margin-bottom:6px}
+.zone-card .zc-en{font-size:11px;letter-spacing:1.8px;color:var(--ink2);opacity:.55;text-transform:uppercase;margin-bottom:16px}
+.zone-card p{font-size:14.5px;color:var(--ink2);line-height:1.85;margin-bottom:20px;flex:1}
+.zc-tags{display:flex;flex-wrap:wrap;gap:7px}
+.zc-tags span{
+  font-size:11.5px;padding:4px 11px;border-radius:999px;
+  background:var(--paper2);color:var(--ink2);transition:.25s;
+}
+.zone-card:hover .zc-tags span{background:var(--accent-bg,rgba(47,107,79,.12));color:var(--accent,var(--green))}
+
+/* ---------- 视频内容区 ---------- */
+.video-section{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.video-section::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 15% 20%,rgba(47,107,79,.28),transparent 55%),
+    radial-gradient(ellipse at 88% 85%,rgba(44,95,124,.28),transparent 55%);
+  pointer-events:none;
+}
+.video-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:80px 24px;z-index:1}
+.video-inner .sec-kicker{color:var(--green-l)}
+.video-inner .sec-kicker::before{background:var(--green-l)}
+.video-inner h2{color:#fff}
+.video-inner .sec-head p{color:rgba(245,242,234,.72)}
+.video-layout{display:grid;grid-template-columns:1.55fr 1fr;gap:26px}
+.player{
+  border-radius:20px;overflow:hidden;position:relative;
+  background:linear-gradient(150deg,#1a2c38,#0b141b);
+  border:1px solid rgba(245,242,234,.14);
+  aspect-ratio:16/9;cursor:pointer;
+}
+.player-cover{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 35%,rgba(79,156,116,.35),transparent 50%),
+    radial-gradient(circle at 75% 70%,rgba(44,95,124,.35),transparent 50%),
+    linear-gradient(160deg,#16242f,#0a1218);
+  display:grid;place-items:center;
+}
+.player-cover svg.map-lines{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.play-btn{
+  width:78px;height:78px;border-radius:50%;
+  background:rgba(245,242,234,.14);backdrop-filter:blur(8px);
+  display:grid;place-items:center;border:1.5px solid rgba(245,242,234,.4);
+  transition:.3s;position:relative;z-index:2;
+}
+.player:hover .play-btn{background:var(--green);border-color:var(--green);transform:scale(1.08)}
+.play-btn svg{width:26px;height:26px;margin-left:4px;fill:#fff}
+.player-meta{
+  position:absolute;left:22px;bottom:20px;right:90px;z-index:2;
+}
+.player-meta b{display:block;font-size:17px;color:#fff;letter-spacing:.2px;margin-bottom:4px}
+.player-meta span{font-size:12px;color:rgba(245,242,234,.6)}
+.player-time{
+  position:absolute;right:22px;bottom:22px;z-index:2;
+  font-size:11.5px;padding:4px 11px;border-radius:6px;
+  background:rgba(0,0,0,.55);color:#fff;letter-spacing:.5px;
+}
+.playlist{display:flex;flex-direction:column;gap:11px}
+.pl-item{
+  display:flex;gap:14px;align-items:center;padding:12px;
+  border-radius:13px;border:1px solid rgba(245,242,234,.1);
+  background:rgba(245,242,234,.03);transition:.28s;cursor:pointer;
+}
+.pl-item:hover,.pl-item.active{
+  background:rgba(245,242,234,.09);border-color:rgba(79,156,116,.6);transform:translateX(4px);
+}
+.pl-thumb{
+  width:82px;height:52px;border-radius:8px;flex:0 0 auto;
+  display:grid;place-items:center;position:relative;overflow:hidden;
+}
+.pl-thumb::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(47,107,79,.6),rgba(44,95,124,.6));
+}
+.pl-thumb svg{width:18px;height:18px;fill:rgba(255,255,255,.85);position:relative;z-index:1}
+.pl-info{min-width:0}
+.pl-info b{display:block;font-size:13.5px;color:#fff;font-weight:500;line-height:1.45;margin-bottom:3px;
+  overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.pl-info span{font-size:11px;color:rgba(245,242,234,.5)}
+.video-note{margin-top:26px;font-size:12.5px;color:rgba(245,242,234,.5);display:flex;gap:8px;align-items:center}
+
+/* ---------- 数据/指标体系 ---------- */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.metric{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:26px 22px;transition:.3s;
+}
+.metric:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(14,26,36,.5);border-color:rgba(47,107,79,.4)}
+.metric b{display:block;font-size:34px;font-weight:800;letter-spacing:-1px;color:var(--green);margin-bottom:4px;line-height:1.1}
+.metric b small{font-size:15px;font-weight:600;color:var(--ink2);opacity:.6;margin-left:2px}
+.metric span{font-size:13px;color:var(--ink2);opacity:.8}
+
+/* ---------- 政策时间线 ---------- */
+.timeline{position:relative;padding-left:30px}
+.timeline::before{
+  content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--green),var(--gold),var(--sky));
+  opacity:.4;border-radius:2px;
+}
+.tl-item{position:relative;padding:0 0 34px 0}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-30px;top:7px;width:14px;height:14px;
+  border-radius:50%;background:var(--paper);border:2.5px solid var(--green);transition:.3s;
+}
+.tl-item:hover::before{background:var(--green);transform:scale(1.15)}
+.tl-year{font-size:12.5px;font-weight:700;color:var(--green);letter-spacing:1.5px;margin-bottom:5px}
+.tl-item h4{font-size:17px;margin-bottom:7px;letter-spacing:-.2px}
+.tl-item p{font-size:14px;color:var(--ink2);line-height:1.8;max-width:660px}
+
+/* ---------- 社区版块 ---------- */
+.community{background:var(--paper2);position:relative}
+.comm-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:28px}
+.post-card{
+  background:#fff;border-radius:var(--radius);padding:26px;
+  border:1px solid var(--line);display:flex;gap:18px;
+  transition:.3s;margin-bottom:16px;
+}
+.post-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(14,26,36,.5)}
+.avatar{
+  width:48px;height:48px;border-radius:14px;flex:0 0 auto;
+  display:grid;place-items:center;font-weight:700;font-size:16px;color:#fff;
+}
+.av-1{background:linear-gradient(140deg,var(--green),var(--green-l))}
+.av-2{background:linear-gradient(140deg,var(--sky),#5b93b3)}
+.av-3{background:linear-gradient(140deg,var(--gold),#d8ac66)}
+.post-body{min-width:0}
+.post-meta{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--ink2);opacity:.7;margin-bottom:6px;flex-wrap:wrap}
+.post-meta b{color:var(--ink);opacity:1;font-weight:600;font-size:13px}
+.post-body h4{font-size:16px;margin-bottom:8px;letter-spacing:-.2px;line-height:1.5}
+.post-body p{font-size:13.5px;color:var(--ink2);line-height:1.8;margin-bottom:12px}
+.post-tags{display:flex;gap:7px;flex-wrap:wrap}
+.post-tags span{font-size:11px;padding:3px 10px;border-radius:999px;background:rgba(47,107,79,.09);color:var(--green)}
+.side-panel{
+  background:linear-gradient(160deg,var(--ink),#152530);
+  border-radius:var(--radius);padding:32px;color:var(--paper);
+  position:relative;overflow:hidden;
+}
+.side-panel::before{
+  content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;
+  border-radius:50%;background:radial-gradient(circle,rgba(79,156,116,.3),transparent 70%);
+}
+.side-panel h3{font-size:20px;margin-bottom:10px;position:relative}
+.side-panel>p{font-size:13.5px;color:rgba(245,242,234,.65);margin-bottom:24px;line-height:1.8;position:relative}
+.join-list{display:flex;flex-direction:column;gap:13px;margin-bottom:26px;position:relative}
+.join-list li{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:rgba(245,242,234,.85)}
+.join-list svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px;fill:var(--green-l)}
+.side-form{display:flex;gap:9px;position:relative}
+.side-form input{
+  flex:1;min-width:0;padding:12px 16px;border-radius:10px;border:1px solid rgba(245,242,234,.2);
+  background:rgba(245,242,234,.08);color:#fff;font-size:13.5px;outline:none;transition:.25s;
+  font-family:inherit;
+}
+.side-form input::placeholder{color:rgba(245,242,234,.4)}
+.side-form input:focus{border-color:var(--green-l);background:rgba(245,242,234,.14)}
+.side-form button{
+  padding:12px 22px;border-radius:10px;border:none;background:var(--green);
+  color:#fff;font-size:13.5px;font-weight:600;cursor:pointer;transition:.25s;font-family:inherit;
+  white-space:nowrap;
+}
+.side-form button:hover{background:var(--green-l)}
+.form-msg{font-size:12px;color:var(--green-l);margin-top:10px;min-height:18px;position:relative}
+
+/* ---------- 专家/团队 ---------- */
+.experts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.expert{
+  text-align:center;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:30px 20px;transition:.3s;
+}
+.expert:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(47,107,79,.4)}
+.expert-ava{
+  width:76px;height:76px;border-radius:50%;margin:0 auto 16px;
+  display:grid;place-items:center;font-size:24px;font-weight:800;color:#fff;
+  box-shadow:0 12px 26px -14px rgba(14,26,36,.6);
+}
+.expert h4{font-size:16px;margin-bottom:3px}
+.expert .role{font-size:12.5px;color:var(--green);font-weight:600;margin-bottom:10px}
+.expert p{font-size:12.5px;color:var(--ink2);opacity:.78;line-height:1.7}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;font-family:inherit;
+  font-size:16.5px;font-weight:600;color:var(--ink);padding:22px 40px 22px 0;
+  cursor:pointer;position:relative;transition:.25s;line-height:1.55;
+}
+.faq-q:hover{color:var(--green)}
+.faq-q::after{
+  content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  font-size:24px;font-weight:300;color:var(--green);transition:.3s;
+}
+.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;
+  font-size:14.5px;color:var(--ink2);line-height:1.9;
+}
+.faq-item.open .faq-a{max-height:340px;padding-bottom:22px}
+.faq-a p{max-width:700px}
+
+/* ---------- CTA 尾部 ---------- */
+.cta-band{
+  max-width:var(--maxw);margin:0 auto 0;padding:0 24px;
+}
+.cta-inner{
+  background:linear-gradient(130deg,var(--green),#204d38 55%,var(--sky));
+  border-radius:26px;padding:56px 48px;color:#fff;
+  display:flex;justify-content:space-between;align-items:center;gap:36px;
+  position:relative;overflow:hidden;flex-wrap:wrap;
+}
+.cta-inner::before{
+  content:"";position:absolute;right:-60px;bottom:-90px;width:300px;height:300px;
+  border-radius:50%;border:40px solid rgba(255,255,255,.07);
+}
+.cta-inner h2{color:#fff;margin-bottom:10px;font-size:clamp(24px,3.2vw,36px)}
+.cta-inner p{color:rgba(255,255,255,.8);font-size:15px;max-width:480px}
+.cta-inner .btn-primary{background:#fff;color:var(--green);box-shadow:0 16px 34px -16px rgba(0,0,0,.5);white-space:nowrap;position:relative}
+.cta-inner .btn-primary:hover{background:var(--paper);transform:translateY(-2px)}
+
+/* ---------- 页脚 ---------- */
+footer.site{
+  max-width:var(--maxw);margin:0 auto;padding:66px 24px 34px;
+}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;padding-bottom:42px;border-bottom:1px solid var(--line)}
+.foot-brand p{font-size:13.5px;color:var(--ink2);opacity:.78;line-height:1.85;margin-top:14px;max-width:300px}
+.foot-social{display:flex;gap:10px;margin-top:18px}
+.foot-social a{
+  width:36px;height:36px;border-radius:10px;border:1px solid var(--line);
+  display:grid;place-items:center;transition:.25s;color:var(--ink2);
+}
+.foot-social a:hover{background:var(--green);border-color:var(--green);color:#fff;transform:translateY(-2px)}
+.foot-social svg{width:16px;height:16px;fill:currentColor}
+.foot-col h5{font-size:13px;letter-spacing:1.5px;margin-bottom:16px;color:var(--ink);font-weight:700}
+.foot-col li{margin-bottom:10px}
+.foot-col a{font-size:13.5px;color:var(--ink2);opacity:.75;transition:.2s}
+.foot-col a:hover{color:var(--green);opacity:1;padding-left:3px}
+.foot-bottom{
+  padding-top:26px;display:flex;justify-content:space-between;
+  font-size:12.5px;color:var(--ink2);opacity:.6;flex-wrap:wrap;gap:12px;
+}
+
+/* ---------- 回到顶部 ---------- */
+.to-top{
+  position:fixed;right:26px;bottom:26px;width:48px;height:48px;border-radius:50%;
+  background:var(--ink);color:var(--paper);display:grid;place-items:center;
+  border:none;cursor:pointer;box-shadow:var(--shadow);
+  opacity:0;pointer-events:none;transition:.3s;z-index:70;
+}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{background:var(--green);transform:translateY(-3px)}
+.to-top svg{width:19px;height:19px;fill:currentColor}
+
+/* ---------- 滚动入场 ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero{padding-top:52px}
+  .video-layout{grid-template-columns:1fr}
+  .zones{grid-template-columns:1fr}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .comm-grid{grid-template-columns:1fr}
+  .experts{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  nav.main{display:none}
+}
+@media(max-width:640px){
+  .nav{padding:12px 16px;gap:12px}
+  .nav-cta{margin-left:auto;padding:8px 15px;font-size:13px}
+  .hero,.section{padding-left:18px;padding-right:18px}
+  .hero{padding-top:40px;padding-bottom:48px}
+  .hero-stats{gap:22px}
+  .hero-stats b{font-size:22px}
+  .metrics{grid-template-columns:1fr 1fr;gap:14px}
+  .metric{padding:20px 16px}
+  .metric b{font-size:26px}
+  .experts{grid-template-columns:1fr}
+  .cta-inner{padding:38px 24px;flex-direction:column;align-items:flex-start}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .post-card{padding:20px;gap:14px}
+  .zone-card{padding:26px 22px}
+  .to-top{right:16px;bottom:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="#top" class="brand" aria-label="三区三线中三区首页">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 20 L9 5 L15 20 Z"/>
+          <path d="M13 20 L17 11 L21 20 Z"/>
+        </svg>
+      </span>
+      <span class="brand-txt">
+        <b>三区三线中三区</b>
+        <span>Spatial Zone Media</span>
+      </span>
+    </a>
+    <nav class="main">
+      <a href="#zones">三区解读</a>
+      <a href="#videos">影像智库</a>
+      <a href="#metrics">指标体系</a>
+      <a href="#policy">政策脉络</a>
+      <a href="#community">社区</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#community" class="nav-cta">加入社区</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ 主视觉 ============ -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><i></i>国土空间规划 · 权威视频解读</div>
+        <h1>读懂<em>三区三线中三区</em>，把握空间规划的核心框架</h1>
+        <p class="hero-sub">
+          城镇空间、农业空间、生态空间——三大空间构成国土空间开发保护的底盘。我们以专业视频内容、可视化图鉴与持续运营的社区，帮助规划从业者、科研机构与公众理解三区的内涵、边界与治理逻辑。
+        </p>
+        <div class="hero-actions">
+          <a href="#videos" class="btn btn-primary">
+            观看解读专题
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </a>
+          <a href="#zones" class="btn btn-ghost">了解三区定义</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>3</b><span>核心空间类型</span></div>
+          <div><b>128+</b><span>深度视频专题</span></div>
+          <div><b>46 万</b><span>社区学习用户</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="viz-card">
+          <div class="viz-head">
+            <b>三区结构示意</b>
+            <span class="viz-tag">实时图鉴</span>
+          </div>
+          <div class="zone-stack">
+            <div class="zone-row">
+              <span class="zone-dot zd-urban">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V9l6-4 6 4v12"/><path d="M10 21v-5h4v5"/></svg>
+              </span>
+              <span class="zone-info"><b>城镇空间</b><span>Urban Space · 集约高效</span></span>
+              <span class="zone-bar"><i class="zb-urban" style="width:78%"></i></span>
+            </div>
+            <div class="zone-row">
+              <span class="zone-dot zd-agri">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9"/><path d="M12 9c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M4 21h16"/></svg>
+              </span>
+              <span class="zone-info"><b>农业空间</b><span>Agricultural Space · 沃野永续</span></span>
+              <span class="zone-bar"><i class="zb-agri" style="width:64%"></i></span>
+            </div>
+            <div class="zone-row">
+              <span class="zone-dot zd-eco">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V12"/><path d="M12 12c4 0 7-3 7-7-4 0-7 3-7 7z"/><path d="M12 15c-4 0-7-3-7-7 4 0 7 3 7 7z"/></svg>
+              </span>
+              <span class="zone-info"><b>生态空间</b><span>Ecological Space · 系统保护</span></span>
+              <span class="zone-bar"><i class="zb-eco" style="width:88%"></i></span>
+            </div>
+          </div>
+          <div class="viz-foot">
+            <span>数据来源：公开规划资料整理</span>
+            <span>更新于 2024</span>
+          </div>
+        </div>
+        <div class="float-chip"><i></i>每周更新规划影像</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 三区深度解读 ============ -->
+  <section class="section" id="zones">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">The Three Zones</div>
+      <h2>三区：一幅国土的三种叙事</h2>
+      <p>在国土空间规划体系中，三区指城镇空间、农业空间与生态空间。它们并非彼此割裂的拼图，而是同一片土地上相互咬合、动态平衡的功能单元。理解三区，就是理解一座城市、一片田野与一组山水之间的秩序。</p>
+    </div>
+    <div class="zones">
+      <article class="zone-card reveal" style="--accent:var(--sky);--accent-bg:rgba(44,95,124,.12)">
+        <div class="zc-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l4-3 4 3v13"/><path d="M13 21V12l3-2 3 2v9"/><path d="M8 11h1M8 15h1M16 15h1"/></svg>
+        </div>
+        <h3>城镇空间</h3>
+        <div class="zc-en">Urban &amp; Built-up Space</div>
+        <p>以城镇开发边界为约束，承载人口集聚、产业发展与公共服务功能。城镇空间强调集约高效与内涵提升，在有限增量中优化存量结构，让城市生长有边界、有质感、有温度。</p>
+        <div class="zc-tags"><span>开发边界</span><span>集约高效</span><span>城市更新</span><span>公共服务</span></div>
+      </article>
+
+      <article class="zone-card reveal" style="--accent:var(--gold);--accent-bg:rgba(184,137,58,.14)">
+        <div class="zc-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V10"/><path d="M12 10c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6z"/><path d="M12 14c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6z"/><path d="M3 21h18"/><path d="M7 21v-3M17 21v-3"/></svg>
+        </div>
+        <h3>农业空间</h3>
+        <div class="zc-en">Agricultural Production Space</div>
+        <p>以永久基本农田为底线，保障粮食安全与重要农产品供给。农业空间不止于耕作，更涵盖乡村生活、田园景观与三产融合，是城乡之间最具生命力的缓冲带与价值带。</p>
+        <div class="zc-tags"><span>永久基本农田</span><span>粮食安全</span><span>乡村振兴</span><span>田园景观</span></div>
+      </article>
+
+      <article class="zone-card reveal" style="--accent:var(--green);--accent-bg:rgba(47,107,79,.13)">
+        <div class="zc-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l4-7 3 4 3-6 4 7 4-3"/><path d="M3 21h18"/><circle cx="7" cy="5" r="1.6"/><path d="M11 4h9"/></svg>
+        </div>
+        <h3>生态空间</h3>
+        <div class="zc-en">Ecological Conservation Space</div>
+        <p>以生态保护红线为刚性约束，维系生态系统服务功能与生物多样性。生态空间是山、水、林、田、湖、草、沙的生命共同体，也是区域韧性最深处的那层底色。</p>
+        <div class="zc-tags"><span>生态保护红线</span><span>系统保护</span><span>生物多样性</span><span>碳汇能力</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 视频影像智库 ============ -->
+  <section class="video-section" id="videos">
+    <div class="video-inner">
+      <div class="sec-head reveal">
+        <div class="sec-kicker">Video Library</div>
+        <h2>影像智库：用镜头丈量空间</h2>
+        <p>我们把抽象的规划语汇，转译为可观看、可触摸的空间叙事。从一条河流的生态修复，到一片农田的边界划定，每一部短片都是一次对三区的实地理解。</p>
+      </div>
+
+      <div class="video-layout">
+        <div class="player reveal" id="player" role="button" tabindex="0" aria-label="播放专题视频">
+          <div class="player-cover">
+            <svg class="map-lines" viewBox="0 0 640 360" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 260 Q120 200 220 240 T440 210 T640 250" fill="none" stroke="rgba(79,156,116,.5)" stroke-width="1.5"/>
+              <path d="M0 120 Q160 160 300 110 T640 140" fill="none" stroke="rgba(44,95,124,.5)" stroke-width="1.5"/>
+              <path d="M80 0 Q110 120 90 240 T140 360" fill="none" stroke="rgba(184,137,58,.35)" stroke-width="1.2"/>
+              <path d="M420 0 Q400 130 440 250 T470 360" fill="none" stroke="rgba(79,156,116,.35)" stroke-width="1.2"/>
+              <circle cx="220" cy="240" r="4" fill="rgba(79,156,116,.8)"/>
+              <circle cx="440" cy="210" r="4" fill="rgba(44,95,124,.8)"/>
+              <circle cx="300" cy="110" r="3.5" fill="rgba(184,137,58,.8)"/>
+            </svg>
+            <div class="play-btn" id="playBtn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="player-meta">
+            <b id="playerTitle">三区全景：国土空间的功能分区逻辑</b>
+            <span id="playerSub">专题片 · 第 01 集 · 规划基础</span>
+          </div>
+          <div class="player-time" id="playerTime">18:24</div>
+        </div>
+
+        <div class="playlist reveal">
+          <div class="pl-item active" data-title="三区全景：国土空间的功能分区逻辑" data-sub="专题片 · 第 01 集 · 规划基础" data-time="18:24">
+            <span class="pl-thumb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="pl-info"><b>三区全景：国土空间的功能分区逻辑</b><span>专题片 · 第 01 集</span></span>
+          </div>
+          <div class="pl-item" data-title="城镇空间的边界：开发强度如何被计算" data-sub="解读 · 第 02 集 · 方法" data-time="22:07">
+            <span class="pl-thumb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="pl-info"><b>城镇空间的边界：开发强度如何被计算</b><span>解读 · 第 02 集</span></span>
+          </div>
+          <div class="pl-item" data-title="走进农业空间：永久基本农田的日常" data-sub="纪实 · 第 03 集 · 田野" data-time="15:42">
+            <span class="pl-thumb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="pl-info"><b>走进农业空间：永久基本农田的日常</b><span>纪实 · 第 03 集</span></span>
+          </div>
+          <div class="pl-item" data-title="生态空间的呼吸：红线内的生命网络" data-sub="纪录 · 第 04 集 · 生态" data-time="26:18">
+            <span class="pl-thumb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="pl-info"><b>生态空间的呼吸：红线内的生命网络</b><span>纪录 · 第 04 集</span></span>
+          </div>
+          <div class="pl-item" data-title="三区之间的对话：冲突与协同" data-sub="对谈 · 第 05 集 · 治理" data-time="19:55">
+            <span class="pl-thumb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="pl-info"><b>三区之间的对话：冲突与协同</b><span>对谈 · 第 05 集</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="video-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        点击播放器或右侧列表切换专题。影像内容每周三更新，完整片单请在社区内查看。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 指标体系 ============ -->
+  <section class="section" id="metrics">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">Key Metrics</div>
+      <h2>用指标看见三区的刻度</h2>
+      <p>空间规划不是模糊的愿景，而是由一组组可测量的指标支撑。我们从公开资料与社区调研中提炼出长期跟踪的关键数值，帮助你把宏观结构落到具体感受。</p>
+    </div>
+    <div class="metrics">
+      <div class="metric reveal"><b>33<small>%</small></b><span>城镇空间开发强度参考上限</span></div>
+      <div class="metric reveal"><b>18<small>亿亩</small></b><span>耕地保护红线规模（全国）</span></div>
+      <div class="metric reveal"><b>25<small>%</small></b><span>生态保护红线占陆域国土比例</span></div>
+      <div class="metric reveal"><b>128<small>+</small></b><span>平台已上线深度视频专题</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 政策脉络 ============ -->
+  <section class="section" id="policy">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">Policy Timeline</div>
+      <h2>从概念到制度：三区的政策脉络</h2>
+      <p>三区并非一蹴而就的提法，而是经过多年试点、整合与制度化沉淀的结果。理解这条时间线，才能理解今天空间规划语言里的每一个词为何如此精确。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-year">2010 前后</div>
+        <h4>主体功能区理念逐步落地</h4>
+        <p>以资源环境承载能力为基础，划定优化开发、重点开发、限制开发与禁止开发区域，为后来三区的空间分类提供了思想雏形与方法积累。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2013 — 2017</div>
+        <h4>多规合一试点推开</h4>
+        <p>各地开始探索经济社会发展规划、城乡规划、土地利用规划、生态环境保护规划等"多规合一"，三区三线作为整合各类空间边界的技术框架被反复讨论与试验。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2019</div>
+        <h4>国土空间规划体系建立</h4>
+        <p>随着相关制度文件出台，三区三线正式成为国土空间规划的核心内容之一。城镇空间、农业空间、生态空间的划分与三条控制线的划定，构成规划编制的基础底盘。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2020 — 2023</div>
+        <h4>三区三线划定全面推进</h4>
+        <p>各层级国土空间规划陆续完成三区三线划定成果，强调耕地保护优先、生态保护红线刚性约束与城镇开发边界的集约导向，空间治理进入精细化阶段。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2024 至今</div>
+        <h4>从划定走向实施监督</h4>
+        <p>重点转向规划实施、动态监测与定期评估。三区不再只是图纸上的分区，而是进入日常管理、项目审批与生态补偿机制中的活规则。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 社区 ============ -->
+  <section class="section community" id="community">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">Community</div>
+      <h2>一个持续生长的规划社区</h2>
+      <p>三区的话题从来不只是专家的讨论。规划师、研究者、基层工作者与关心家乡的普通人，在这里分享观察、交换疑问，让空间知识真正流动起来。</p>
+    </div>
+    <div class="comm-grid">
+      <div class="reveal">
+        <article class="post-card">
+          <div class="avatar av-1">规</div>
+          <div class="post-body">
+            <div class="post-meta"><b>林工 · 注册规划师</b><span>·</span><span>3 小时前</span><span>·</span><span>专栏</span></div>
+            <h4>城镇空间的"留白"，到底应该留给谁？</h4>
+            <p>我们在一个县域规划里尝试了弹性留白机制，把近期不明确用途的地块先纳入城镇空间但不锁定具体功能，实施两年后，公共空间和产业用地的调整效率明显提升。分享一些踩过的坑。</p>
+            <div class="post-tags"><span>城镇空间</span><span>弹性规划</span><span>实践复盘</span></div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="avatar av-2">野</div>
+          <div class="post-body">
+            <div class="post-meta"><b>荒野笔记 · 生态观察者</b><span>·</span><span>昨天</span><span>·</span><span>影像</span></div>
+            <h4>用一年的延时摄影，记录生态空间里的四季</h4>
+            <p>在一条生态保护红线内的山谷架设了固定机位，从融雪到封山完整记录了一年。最打动我的是动物活动路径和红线走向高度吻合，这说明科学划定真的有用。</p>
+            <div class="post-tags"><span>生态空间</span><span>延时摄影</span><span>生物多样性</span></div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="avatar av-3">田</div>
+          <div class="post-body">
+            <div class="post-meta"><b>田埂边 · 乡村工作者</b><span>·</span><span>2 天前</span><span>·</span><span>讨论</span></div>
+            <h4>农业空间里的三产融合，边界在哪里？</h4>
+            <p>村里想做一个稻田咖啡馆，又担心触碰用地红线。农业空间能不能承载一定的休闲功能？有没有相对清晰的判断口径？想听听大家的经验。</p>
+            <div class="post-tags"><span>农业空间</span><span>三产融合</span><span>用地边界</span></div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="side-panel reveal">
+        <h3>成为社区同行者</h3>
+        <p>订阅每周空间观察简报，第一时间收到新专题、政策解读与社区精选讨论。</p>
+        <ul class="join-list">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            每周一篇三区深度解读
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            新视频专题优先观看
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            参与社区圆桌与线上对谈
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            获取规划资料索引清单
+          </li>
+        </ul>
+        <form class="side-form" id="joinForm" novalidate>
+          <input type="email" id="joinEmail" placeholder="你的邮箱地址" aria-label="邮箱地址">
+          <button type="submit">订阅</button>
+        </form>
+        <div class="form-msg" id="formMsg" role="status"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 专家团队 ============ -->
+  <section class="section" id="experts">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">Contributors</div>
+      <h2>内容背后的同行者</h2>
+      <p>我们与长期活跃在规划实践、生态研究与乡村一线的创作者合作，保证每一个专题既有专业密度，也有现场温度。</p>
+    </div>
+    <div class="experts">
+      <div class="expert reveal">
+        <div class="expert-ava av-1">陈</div>
+        <h4>陈屿</h4>
+        <div class="role">空间规划主笔</div>
+        <p>十五年国土空间规划经验，专注三区三线划定与实施评估的方法研究。</p>
+      </div>
+      <div class="expert reveal">
+        <div class="expert-ava av-2">周</div>
+        <h4>周晚舟</h4>
+        <div class="role">生态影像导演</div>
+        <p>自然纪录片创作者，长期跟踪生态保护红线内的人与野生动植物关系。</p>
+      </div>
+      <div class="expert reveal">
+        <div class="expert-ava av-3">许</div>
+        <h4>许禾</h4>
+        <div class="role">乡村发展顾问</div>
+        <p>深耕农业空间与乡村振兴实践，关注田园功能复合与土地价值重塑。</p>
+      </div>
+      <div class="expert reveal">
+        <div class="expert-ava" style="background:linear-gradient(140deg,#2c5f7c,#2f6b4f)">顾</div>
+        <h4>顾城</h4>
+        <div class="role">数据可视化设计</div>
+        <p>把复杂空间指标体系转译为直观图形，让规划数据被更多人看懂。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 常见问题 ============ -->
+  <section class="section" id="faq">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">FAQ</div>
+      <h2>关于三区，常见的问题</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q" type="button">三区具体指哪三类空间？</button>
+        <div class="faq-a"><p>三区指城镇空间、农业空间与生态空间。城镇空间承载人口与产业集聚，农业空间保障农产品供给与乡村发展，生态空间维系生态系统服务与生物多样性。三者共同构成国土空间开发保护的基础分区框架。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">三区与三线是什么关系？</button>
+        <div class="faq-a"><p>三区是功能空间的分区，三线是对应的控制线，包括城镇开发边界、永久基本农田保护红线和生态保护红线。可以理解为：三区回答"这片地主要做什么"，三线回答"这条线不能越"。两者相互支撑，共同构成空间管控的核心工具。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">三区之间是固定不变的吗？</button>
+        <div class="faq-a"><p>不是。三区划分以资源环境承载能力和国土空间开发适宜性评价为基础，会随着规划周期、评估结果和实际发展需要进行动态调整。但调整需遵循严格程序，尤其涉及红线与永久基本农田的部分具有很强刚性。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">普通人为什么要了解三区？</button>
+        <div class="faq-a"><p>三区直接关系到城市扩展的节奏、农田的保护、生态空间的留存，也影响居住环境、通勤距离与公共设施布局。理解三区逻辑，能帮助公众更理性地参与规划公示意见，也更清楚家乡变化的来龙去脉。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">这个平台的视频内容从哪里来？</button>
+        <div class="faq-a"><p>内容由平台编辑团队联合规划从业者、生态影像创作者与乡村工作者共同制作，部分素材来自社区投稿并经授权使用。所有专题均以公开规划资料与实地走访为基础，力求准确、可读、可核查。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <div class="cta-band">
+    <div class="cta-inner reveal">
+      <div>
+        <h2>从一条边界开始，重新认识脚下的土地</h2>
+        <p>订阅简报或加入社区，与四十六万同行者一起，持续追踪三区三线中三区的每一次更新与实践。</p>
+      </div>
+      <a href="#community" class="btn btn-primary">立即加入社区</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20 L9 5 L15 20 Z"/>
+            <path d="M13 20 L17 11 L21 20 Z"/>
+          </svg>
+        </span>
+        <span class="brand-txt"><b>三区三线中三区</b><span>Spatial Zone Media</span></span>
+      </div>
+      <p>以影像与社区为媒介，持续解读城镇空间、农业空间与生态空间，让国土空间规划知识走进更多人的日常。</p>
+      <div class="foot-social">
+        <a href="#top" aria-label="微信"><svg viewBox="0 0 24 24"><path d="M9 4C4.5 4 1 6.9 1 10.5c0 2 1.2 3.8 3.1 5l-.8 2.6 2.9-1.5c.9.3 1.8.4 2.8.4h.6c-.2-.6-.3-1.2-.3-1.9 0-3.6 3.5-6.5 7.8-6.5h.7C17.2 5.6 13.5 4 9 4zm-2.6 3.6c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm5.2 0c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z"/><path d="M23 15.1c0-2.9-2.9-5.3-6.5-5.3s-6.5 2.4-6.5 5.3 2.9 5.3 6.5 5.3c.8 0 1.5-.1 2.2-.3l2.3 1.2-.6-2c1.6-1 2.6-2.5 2.6-4.2zm-8.7-1.4c-.5 0-.8-.3-.8-.8s.3-.8.8-.8.8.3.8.8-.3.8-.8.8zm4.4 0c-.5 0-.8-.3-.8-.8s.3-.8.8-.8.8.3.8.8-.3.8-.8.8z"/></svg></a>
+        <a href="#videos" aria-label="视频号"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2h-7l-4 3v-3H4a2 2 0 01-2-2V6a2 2 0 012-2zm5 4v5l4-2.5L9 8z"/></svg></a>
+        <a href="#community" aria-label="社区"><svg viewBox="0 0 24 24"><path d="M12 2a6 6 0 00-6 6c0 1.7.7 3.2 1.8 4.3L6 22l6-3 6 3-1.8-9.7A6 6 0 0012 2zm0 3a3 3 0 110 6 3 3 0 010-6z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h5>内容</h5>
+      <ul>
+        <li><a href="#zones">三区解读</a></li>
+        <li><a href="#videos">影像智库</a></li>
+        <li><a href="#metrics">指标体系</a></li>
+        <li><a href="#policy">政策脉络</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>社区</h5>
+      <ul>
+        <li><a href="#community">社区动态</a></li>
+        <li><a href="#experts">创作者</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#community">订阅简报</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>关于</h5>
+      <ul>
+        <li><a href="#top">品牌介绍</a></li>
+        <li><a href="#top">内容规范</a></li>
+        <li><a href="#top">资料声明</a></li>
+        <li><a href="#top">联系合作</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2024 三区三线中三区 · 空间规划内容与社区平台</span>
+    <span>本页内容基于公开规划资料整理，仅供学习交流</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 播放列表切换 ---------- */
+  var player = document.getElementById('player');
+  var playerTitle = document.getElementById('playerTitle');
+  var playerSub = document.getElementById('playerSub');
+  var playerTime = document.getElementById('playerTime');
+  var items = Array.prototype.slice.call(document.querySelectorAll('.pl-item'));
+
+  function selectItem(item){
+    items.forEach(function(el){ el.classList.remove('active'); });
+    item.classList.add('active');
+    playerTitle.textContent = item.getAttribute('data-title');
+    playerSub.textContent = item.getAttribute('data-sub');
+    playerTime.textContent = item.getAttribute('data-time');
+  }
+
+  items.forEach(function(item){
+    item.addEventListener('click', function(){ selectItem(item); });
+    item.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); selectItem(item); }
+    });
+    item.setAttribute('tabindex','0');
+  });
+
+  /* ---------- 播放按钮反馈 ---------- */
+  var playing = false;
+  var playBtn = document.getElementById('playBtn');
+  var playIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+  var pauseIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+
+  function togglePlay(){
+    playing = !playing;
+    playBtn.innerHTML = playing ? pauseIcon : playIcon;
+    var cover = player.querySelector('.player-cover');
+    if(cover){
+      cover.style.transition = 'opacity .35s';
+      cover.style.opacity = playing ? '.72' : '1';
+    }
+  }
+
+  player.addEventListener('click', function(e){
+    if(e.target.closest && e.target.closest('.pl-item')) return;
+    togglePlay();
+  });
+  player.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); togglePlay(); }
+  });
+
+  /* ---------- FAQ 手风琴 ---------- */
+  var faqItems = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+  faqItems.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      faqItems.forEach(function(other){
+        other.classList.remove('open');
+        var oq = other.querySelector('.faq-q');
+        if(oq) oq.setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        q.setAttribute('aria-expanded','true');
+      }
+    });
+    q.setAttribute('aria-expanded','false');
+  });
+
+  /* ---------- 订阅表单 ---------- */
+  var form = document.getElementById('joinForm');
+  var emailInput = document.getElementById('joinEmail');
+  var formMsg = document.getElementById('formMsg');
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var val = (emailInput.value || '').trim();
+      var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      if(!val){
+        formMsg.style.color = '#e0a28a';
+        formMsg.textContent = '请填写邮箱地址后再订阅。';
+        return;
+      }
+      if(!re.test(val)){
+        formMsg.style.color = '#e0a28a';
+        formMsg.textContent = '邮箱格式似乎不太对，请检查一下。';
+        return;
+      }
+      formMsg.style.color = 'var(--green-l)';
+      formMsg.textContent = '订阅成功！每周简报将发送至 ' + val + '。';
+      emailInput.value = '';
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById('toTop');
+  var ticking = false;
+  function onScroll(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        if(window.scrollY > 520){ toTop.classList.add('show'); }
+        else{ toTop.classList.remove('show'); }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- 滚动入场 ---------- */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el, i){
+      el.style.transitionDelay = (Math.min(i,6) * 55) + 'ms';
+      io.observe(el);
+    });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- 导航平滑滚动增强（兼容旧浏览器） ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id === '#' || id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 68;
+      window.scrollTo({top: top, behavior:'smooth'});
+    });
+  });
+
+  /* ---------- 指标数字入场动画 ---------- */
+  function animateCount(el){
+    var text = el.textContent;
+    var match = text.match(/^(\d+)/);
+    if(!match) return;
+    var targetNum = parseInt(match[1], 10);
+    var suffix = text.slice(match[1].length);
+    var start = null;
+    var dur = 1100;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var current = Math.round(targetNum * eased);
+      el.textContent = current + suffix;
+      if(p < 1) window.requestAnimationFrame(step);
+    }
+    el.textContent = '0' + suffix;
+    window.requestAnimationFrame(step);
+  }
+
+  var metrics = Array.prototype.slice.call(document.querySelectorAll('.metric b'));
+  if('IntersectionObserver' in window){
+    var mo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          animateCount(entry.target);
+          mo.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.5});
+    metrics.forEach(function(el){ mo.observe(el); });
+  }
+
+})();
+</script>
+</body>
+  </html>
